@@ -1,13 +1,17 @@
 name: Continious integrations for node app
 
 on:
-  pull_request:
-    branches: [ main ]
-    paths: './web/**'
   push:
-    branches: [ main ]
-    paths: './web/**'
-  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - './web/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - './web/**'
+  workflow_dispatch: 
 
 
 jobs:
