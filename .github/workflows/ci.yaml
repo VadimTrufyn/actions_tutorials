@@ -33,7 +33,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: './web/**'
+        working-directory: './web/'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
