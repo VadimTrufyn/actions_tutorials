@@ -1,17 +1,17 @@
-name: 'Code scanong'
+name: 'Code scanisng'
 
 on:
-    push: 
-        branches: main
-        paths:
-            - './web/**'
-    
+    push:
+      branches:
+        - main
+      paths:
+        - 'web/**'
     pull_request:
-        branches: main
-        paths:
-            - './web/**'
-    workflow_dispatch:
-
+      branches:
+        - main
+      paths:
+        - 'web/**'
+    workflow_dispatch: 
 jobs:
     analize:
         name: Analize code
@@ -30,13 +30,13 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Initialize CodeQl
-              uses: github/codeql-action/init@v1
+              uses: github/codeql-action/init@v3
               with:
                 languages: ${{ matrix.language }}
             
-            - name: Autubuild
-              uses: actions/codeql-action/autobuild@v1
+            - name: Autobuild
+              uses: github/codeql-action/autobuild@v3
 
-            - name: Perform CodeQl Analysis
-              uses: actions/codeql-action/analyze@v1
-              
+            - name: Perform CodeQl Analyze
+              uses: github/codeql-action/analyze@v3
+
