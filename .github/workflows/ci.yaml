@@ -28,6 +28,21 @@ jobs:
       - name: 'Run tests'
         run: npm run test
 
+  lint:
+    name: 'Linting code'
+    defaults:
+      run:
+        shell: bash
+        working-directory: './web/**'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: 'Copy code from repo'
 
+      - name: 'Install dendencies'
+        run: npm ilstall
+
+      - name: 'Run lint'
+        run: npx standard -v
 
 
