@@ -11,3 +11,23 @@ on:
 
 
 jobs:
+  test:
+    name: 'Run tests'
+    defaults:
+      run:
+        shell: bash
+        working-directory: './web/'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: 'Copy code from repository'
+      
+      - name: 'Istall dependencies'
+        run: npm install
+
+      - name: 'Run tests'
+        run: npm run test
+
+
+
+
