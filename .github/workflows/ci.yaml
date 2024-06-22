@@ -40,7 +40,7 @@ jobs:
         name: 'Copy code from repo'
 
       - name: 'Install dendencies'
-        run: npm ilstall
+        run: npm install
 
       - name: 'Run lint'
         run: npx standard -v
