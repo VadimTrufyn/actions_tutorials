@@ -45,4 +45,4 @@ jobs:
                   cd /var/app/web
                   npm ci
                   pm2 start /var/app/web/bin/www || pm2 restart /var/app/web/bin/www 
-                  sudo service nginx restar
+                  sudo service nginx restart
