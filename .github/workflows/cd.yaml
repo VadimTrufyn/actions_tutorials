@@ -44,5 +44,5 @@ jobs:
                 command: |
                   cd /var/app/web
                   npm ci
-                  pm2 start /var/app/web/bin/www || pm2 restart /var/app/web/bin/www
+                  pm2 restart /var/app/web/bin/www || pm2 start /var/app/web/bin/www || echo 'nothing to execute'
                   sudo service nginx restart
